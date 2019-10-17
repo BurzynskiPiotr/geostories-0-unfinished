@@ -1,0 +1,140 @@
+//@import './header'
+//$classLike : ""
+// &:hover 
+//@mixin group {}
+//@incluce group()
+//@extend header
+
+// $$$ 
+$primaryColor : #ffcc99;
+$secondaryColor: rgb(252, 248, 248);
+$interreactionColor: rgba(239, 226, 186, 0.801);
+$fontColor: #272727;
+
+$transitionTime: 0.5s;
+
+//groups 
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin btnDefault {
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    color: $fontColor;
+    transition: $transitionTime;
+    outline: none;
+    cursor: pointer;
+}
+
+// content
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: $primaryColor;
+    color: $fontColor;
+    font-family: 'Raleway', sans-serif;
+    @include flexCenter();
+}
+
+.container {
+    width: 80vw;
+    height: 80vh;
+    background: $secondaryColor;
+}
+
+header {
+
+    .title {
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+        transition: $transitionTime;
+        margin-top: -20px;
+        cursor: default;
+
+        .title-span {
+            font-size: 30px;
+        }
+        
+        span {
+            transition: $transitionTime;
+            opacity: 0;
+            cursor: default;
+        }
+        
+    }
+
+    height: 10%;
+    @include flexCenter();
+}
+
+.sector-display {
+    width: 100%;
+    height: 80%;
+    @include flexCenter();
+}
+
+.home { 
+
+    width: 90%;
+    height: 100%;
+    @include flexCenter();
+
+    .home-action {
+        width: 40%;
+        height: 90%;
+        @include flexCenter();
+        padding: 20px 0 20px 40px;
+    
+        .action-window {
+            background: $primaryColor;
+            width: 90%;
+            height: 40%;
+            @include flexCenter();
+        }
+
+    }
+
+    .home-map {
+        width: 60%;
+        height: 90%;
+        @include flexCenter();
+        padding: 20px 20px 20px 0px;
+
+        .home-map-center {
+            background: $primaryColor;
+            width: 90%;
+            height: 90%;
+            @include flexCenter();
+        }
+    }
+}
+
+.sector-nav {
+
+    .nav-button{
+        width: 10%;
+        text-align: center;
+
+        button {
+            @include btnDefault();
+            background: none;
+            font-size: 16px;
+            transition: 0.2s;
+
+        }
+    }
+
+    @include flexCenter();
+}

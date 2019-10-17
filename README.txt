@@ -1,0 +1,1 @@
+App Geostories will provide you memories from your past, that you can save with data, small description and of course, place where that thing happened
